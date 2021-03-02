@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dbcomparehtmlreport:
+    image: dbcomparehtmlreport
+    build:
+      context: .
+      dockerfile: ./Dockerfile

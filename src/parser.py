@@ -1,12 +1,15 @@
 import json
 import pandas as pd
 
-with open('log_json_detailed.txt') as json_file:
-    for i in json_file.readlines():
-        data =json.loads(i)
-        df = pd.DataFrame.from_records(data)
-        print(df)
+def parse_file():
+    with open('log_json_detailed.txt') as json_file:
+        for i in json_file.readlines():
+            data =json.loads(i)
+            df = pd.DataFrame.from_records(data)
+            print(df)
     
+if __name__ == "__main__":
+    parse_file()
 
 # create table
 
